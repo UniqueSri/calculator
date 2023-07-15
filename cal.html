@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .border{
+            height: 400px;
+            width: 400px;
+            border: 4px solid black;
+             background-color:silver;
+             border-radius: 20px;
+            margin: auto;
+            background-color: rgb(92, 231, 231);
+        }
+        .cal{
+            text-align: center;
+            border-style: dashed;
+            width: 200px;
+            margin: auto;
+            border-radius: 20px;
+        }
+        .num1{
+            width: 100px;
+            height: 40px;
+            border-radius: 30px;
+            border: 3px solid black;
+            margin-left: 70px;
+            text-align: center;
+            background-color: aliceblue;
+        }
+        .num2{
+            width: 100px;
+            height: 40px;
+            border-radius: 30px;
+            border: 3px solid black;    
+            margin-left: 20px;
+            text-align: center;
+            background-color: aliceblue;
+        }
+        .add{
+            height: 40px;
+            width: 40px;
+            margin-left: 90px;
+            border: 3px solid black;
+            border-radius: 10px;
+            font-size: larger;
+            background-color:silver
+        }
+        .sub{
+            height: 40px;
+            width: 40px;
+            border-radius: 10px;
+            margin-left: 10px;
+            font-size: larger;
+            border: 3px solid black;
+            background-color:silver
+        }
+        .multi{
+            height: 40px;
+            width: 40px;
+            border-radius: 10px; 
+           margin-left: 10px;
+           font-size: larger;
+           border: 3px solid black;
+           background-color:silver
+        }
+        .div{
+            height: 40px;
+            width: 40px;
+            border-radius: 10px; 
+            margin-left: 10px;
+            font-size: larger;
+            border: 3px solid black;
+            background-color:silver
+        }
+      .result{
+            width: 100px;
+            height: 40px;
+            border: 3px solid black;
+            border-radius: 30px;
+           margin-left: 120px;
+           text-align: center;
+           background-color:aliceblue;
+      }
+
+    </style>
+</head>
+<body>
+    <div class="border"><br><br><br>
+       <h1 class="cal">Calculator</h1><br><br>
+       <input id="i1" class="num1" type="number" placeholder="num1">
+       <input id="i2" class="num2" type="number" placeholder="num2"><br><br><br>
+       <button onclick="add()" class="add" >+</button>
+       <button onclick="sub()" class="sub" >-</button>
+       <button onclick="multi()" class="multi">*</button>
+       <button onclick="div()" class="div"> /</button><br><br><br>
+
+       <input id="r" class="result" type="number" placeholder="result">
+    </div>
+   <script>
+       function add(){
+        let num1=Number(document.getElementById('i1').value);
+        let num2=Number(document.getElementById('i2').value);
+        let res=num1+num2;
+        document.getElementById('r').value=res;
+       }
+       function sub(){
+        let num1=Number(document.getElementById('i1').value);
+        let num2=Number(document.getElementById('i2').value);
+        let res=num1-num2;
+        document.getElementById('r').value=res;
+       }
+       function multi(){
+        let num1=Number(document.getElementById('i1').value);
+        let num2=Number(document.getElementById('i2').value);
+        let res=num1*num2;
+        document.getElementById('r').value=res;
+       }
+       function div(){
+        let num1=Number(document.getElementById('i1').value);
+        let num2=Number(document.getElementById('i2').value);
+        let res=num1/num2;
+        document.getElementById('r').value=res;
+       }
+   </script>
+</body>
+</html>
